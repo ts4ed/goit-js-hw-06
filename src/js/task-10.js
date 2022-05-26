@@ -11,6 +11,11 @@ const boxEl = document.querySelector("#boxes");
 btnCreateEl.addEventListener("click", create);
 btnDestroyEl.addEventListener("click", destroy);
 
+
+
+
+// Подскажите каким еще способом можно решить эту задачу?
+// При решении пришлось гуглить и искать подсказки для этой функции
 function createBoxes(value) {
   const fragment = document.createDocumentFragment();
   for (let i = 0; i < value; i += 1) {
