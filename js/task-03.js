@@ -15,14 +15,15 @@ const images = [
 
 const galleryEl = images.map((image) => {
   const liEl = document.createElement("li");
-  liEl.classList = "list__item";
   const imgEl = document.createElement("img");
 
+  liEl.classList = "list__item";
   imgEl.src = image.url;
   imgEl.alt = image.alt;
   imgEl.width = "400";
   imgEl.height = "300";
 
+  
   liEl.append(imgEl);
   return liEl;
 });
