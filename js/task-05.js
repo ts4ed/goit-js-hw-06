@@ -8,7 +8,6 @@ refs.spanEl.addEventListener("click", onSpanChange);
 
 function onSpanChange(event) {
   refs.spanEl.textContent = event.currentTarget.value;
-  if (refs.spanEl.textContent === "") {
-    return (refs.spanEl.textContent = "Anonymous");
-  }
+  refs.spanEl.textContent === "" ? refs.spanEl.textContent = "Anonymous" : false ;
+  
 }

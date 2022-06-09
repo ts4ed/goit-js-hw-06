@@ -22,7 +22,7 @@ function createBoxes(value) {
     const size = 30 + i * 10;
     const div = document.createElement("div");
     div.style.cssText = `margin-top: 10px; margin-left: auto; margin-right: auto; width: ${size}px; height: ${size}px; 
-      background-color: #${Math.floor(Math.random() * 16777215).toString(16)}`;
+      background-color: ${getRandomHexColor()}`;
     fragment.appendChild(div);
   }
   boxEl.appendChild(fragment);
@@ -35,4 +35,9 @@ function create() {
 
 function destroy() {
   boxEl.textContent = "";
+}
+function getRandomHexColor() {
+  return `#${Math.floor(Math.random() * 16777215)
+    .toString(16)
+    .padStart(6, 0)}`;
 }
