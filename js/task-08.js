@@ -8,12 +8,15 @@ function onFormSubmit(event) {
   event.preventDefault();
 
   for (var i = 0; i < input.length; i++) {
-    if (!input[i].value) {
+    if (!input[i].value ) {
       return alert(`Заполните все поля`);
     }
-    forms.push(`${input[i].type}: ${input[i].value}`);
+    if (!forms.includes(`${input[i].type}: ${input[i].value}`)) {
+     forms.push(`${input[i].type}: ${input[i].value}`);
+    }
     obj = Object.assign({}, forms);
   }
+  
   console.log(obj);
   obj = {};
   forms = [];
